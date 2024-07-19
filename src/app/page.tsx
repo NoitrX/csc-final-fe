@@ -60,8 +60,8 @@ meningkatkan capaian prestasi mahasiswa. </p>
             </div>
           </div>
         </div>
-        <div className="min-h-full min-w-full md:min-w-[auto] overflow-hidden">
-          <img src="/sample.png" className="h-full w-full md:w-auto object-cover" />
+        <div className="min-h-full max-h-full min-w-full max-w-full md:min-w-[auto] overflow-hidden">
+          <img src="/coding.png" className="h-auto md:h-full w-full md:w-auto object-cover" />
         </div>
       </div>
       <div className="w-full p-20 bg-[#0D1221] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 font-poppins">
