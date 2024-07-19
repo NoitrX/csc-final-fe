@@ -1,8 +1,11 @@
+import { Big_Shoulders_Inline_Text, Poppins, Roboto_Flex, Ubuntu } from "next/font/google";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const bigShouldersInlineText = Big_Shoulders_Inline_Text({ weight: ["300", "400", "500", "600", "700"], display: "swap", subsets: ["latin"], variable: "--font-big-shoulders-inline-text" });
+const poppins = Poppins({ weight: ["300", "400", "500", "600", "700"], display: "swap", subsets: ["latin"], variable: "--font-poppins" });
+const robotoFlex = Roboto_Flex({ weight: ["300", "400", "500", "700"], display: "swap", subsets: ["latin"], variable: "--font-roboto-flex" });
+const ubuntu = Ubuntu({ weight: ["300", "400", "500", "700"], display: "swap", subsets: ["latin"], variable: "--font-ubuntu" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${bigShouldersInlineText.variable} ${poppins.variable} ${robotoFlex.variable} ${ubuntu.variable}`}>{children}</body>
     </html>
   );
 }

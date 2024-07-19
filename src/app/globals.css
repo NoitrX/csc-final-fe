@@ -31,3 +31,13 @@ body {
     text-wrap: balance;
   }
 }
+
+@keyframes r-to-l {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: -100%
+  }
+}
