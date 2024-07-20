@@ -33,7 +33,7 @@ export default function FAQ() {
                     <FAQQuestion question="Apa Persyaratan Masuk CSC?" answer="..." />
                     <FAQQuestion question="Apa Mahasiswa Jurusan Selain TIK Boleh Mendaftar Sebagai Anggota CSC?" answer="Boleh banget! Soalnya CSC akan mengajarkan konsep dasar tiap divisi secara langsung, dan mentor akan memantau progress tiap member supaya tidak tertinggal. Jadi walau kamu tidak memiliki dasar sama sekali di divisi-divisi kami, tetap bisa mengikuti kegiatan CSC" />
                     <FAQQuestion question="Apa Perbedaan CSC dengan Sahabat PNJ? / Lebih Cocok Masuk CSC atau SPNJ Ya?" answer="..." />
-                    <FAQQuestion question="Apa Boleh Join Lebih dari Satu Divisi?" answer="Kami tidak meminta uang kas dari member baru. Jika kamu dikirimi pesan oleh member pengurus yang meminta uang dengan alasan yang tidak jelas, mohon kirimkan laporan ke admin kami via DM Instagram atau Whatsapp yang tertera pada Kontak Kami.\n\nKami hanya meminta uang saat akan mengadakan acara seperti first gathering, makrab, dll, atau saat membuat merchandise KSM. Dan itu tidak wajib bagi member baru. Hanya yang berminat saja." />
+                    <FAQQuestion question="Apa Boleh Join Lebih dari Satu Divisi?" answer="Tiap member cuman boleh join 1 divisi ya, Kalo kamu masih bimbang pengen join divisi mana, boleh konsultasi dengan kami via grup WA diskusi untuk nemuin divisi mana yang paling cocok sama kamu!" />
                 </div>
             </div>
             <Footer />
