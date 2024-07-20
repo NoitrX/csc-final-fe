@@ -1,4 +1,38 @@
+"use client";
 import { FiHome } from "react-icons/fi";
+
+function Slider({ images }: { images: string[] }) {
+  return (
+    <div>
+      <style jsx>{`
+        @keyframes slide {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(${-250 * images.length - 64 * images.length}px);
+          }
+        }
+
+        .slider {
+          animation: slide 10s linear infinite;
+        }
+      `}</style>
+      <div className="slider min-w-full h-full absolute top-0 flex items-center gap-16 overflow-hidden">
+        {images.map((image, index) => (
+          <div className="w-[250px] h-full flex justify-center overflow-hidden" key={index}>
+            <img src={image} alt={`partner-${index}`} className="h-full object-contain" />
+          </div>
+        ))}
+        {images.map((image, index) => (
+          <div className="w-[250px] h-full flex justify-center overflow-hidden" key={images.length+index}>
+            <img src={image} alt={`partner-${index}`} className="h-full object-contain" />
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
 
 export default function Partners() {
   return (
@@ -12,18 +46,14 @@ export default function Partners() {
       </div>
       <hr className="w-[calc(100%-10rem)] border border-[#555555]" />
       <div className="w-full h-16 relative flex gap-16 overflow-hidden ">
-        <div className="min-w-full h-full absolute top-0 flex items-center animate-partner-slider gap-16 overflow-hidden">
-          <img src="/dicoding.png" alt="dicoding" className="h-full" />
-          <img src="/rumahhost.png" alt="rumahhost" className="h-full" />
-          <img src="/sekolahsiber.png" alt="sekolah siber" className="h-full" />
-          <img src="/ethicalhackerid.png" alt="ethical hacker indonesia" className="h-full" />
-        </div>
-        <div className="min-w-full h-full absolute top-0 flex items-center left-full animate-partner-slider-delayed gap-16 overflow-hidden">
-          <img src="/dicoding.png" alt="dicoding" className="h-full" />
-          <img src="/rumahhost.png" alt="rumahhost" className="h-full" />
-          <img src="/sekolahsiber.png" alt="sekolah siber" className="h-full" />
-          <img src="/ethicalhackerid.png" alt="ethical hacker indonesia" className="h-full" />
-        </div>
+        <Slider
+          images={[
+            "/dicoding.png",
+            "/rumahhost.png",
+            "/sekolahsiber.png",
+            "/ethicalhackerid.png"
+          ]}
+        />
       </div>
       <hr className="w-[calc(100%-10rem)] border border-[#555555]" />
     </div>

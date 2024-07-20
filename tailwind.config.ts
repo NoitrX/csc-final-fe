@@ -5,8 +5,6 @@ const config: Config = {
   theme: {
     extend: {
       animation: {
-        "partner-slider": "r-to-l 20s infinite linear",
-        "partner-slider-delayed": "r-to-l 20s infinite linear 10s",
         "faq-appear": "max-height-appear 0.25s ease-in-out forwards",
         "faq-disappear": "max-height-disappear 0.25s ease-in-out forwards",
         "faq-chevron-rotate": "rotate-180 0.25s ease-in-out forwards",

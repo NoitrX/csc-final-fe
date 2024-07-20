@@ -24,16 +24,6 @@
   }
 }
 
-@keyframes r-to-l {
-  from {
-    left: 100%;
-  }
-
-  to {
-    left: -100%;
-  }
-}
-
 @keyframes max-height-appear {
   from {
     max-height: 0;
