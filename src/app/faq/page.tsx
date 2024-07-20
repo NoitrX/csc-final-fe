@@ -16,17 +16,18 @@ export default function FAQ() {
                     <TbMessageCircleQuestion className="text-[#6597E1] text-2xl" />
                     <p className="bg-gradient-to-r from-[#6597E1] to-[#D2D2D3] bg-clip-text text-transparent uppercase">Tentang CSC</p>
                 </div>
-                <div className="flex justify-between font-poppins mt-5">
+                <div className="flex flex-col md:flex-row justify-normal md:justify-between gap-5 font-poppins mt-5">
                     <p className="w-full text-4xl text-white font-bold uppercase">
                         Frequently
-                        <a className="bg-gradient-to-r from-[#9BC3FF] to-[#3935FF] bg-clip-text text-transparent ml-3">Asked</a>
+                        <br className="block sm:hidden" />
+                        <a className="bg-gradient-to-r from-[#9BC3FF] to-[#3935FF] bg-clip-text text-transparent ml-0 sm:ml-3">Asked</a>
                         <br/>
                         Question
                     </p>
                     <p className="w-full text-[#B8B8B8] text-sm">Selamat datang di halaman FAQ Klub Komputer! Di sini, kami telah mengumpulkan berbagai pertanyaan yang sering diajukan oleh anggota dan calon anggota klub kami. Halaman ini bertujuan untuk memberikan informasi yang jelas dan membantu menjawab berbagai pertanyaan Anda mengenai CSC.</p>
                 </div>
                 <div className="w-full flex flex-col gap-10 mt-10">
-                    <FAQQuestion question="Kapan Registrasi Member Baru Dibuka?" answer="Pendaftaran KSM biasanya dimulai pada semester 2, Pantau terus Instagram CSC untuk informasi lebih lanjut." />
+                    <FAQQuestion question="Kapan Registrasi Member Baru Dibuka?" answer={<>Pendaftaran KSM biasanya dimulai pada semester 2, Pantau terus <a className="underline" href="https://instagram.com/cscpnj">Instagram CSC</a> untuk informasi lebih lanjut.</>} />
                     <FAQQuestion question="Pertemuan KSM CSC Setiap Hari Apa?" answer="Normalnya, kelas diadakan tiap hari Sabtu jam 9 sampai selesai (Sesi kelas biasanya 2-4 Jam tergantung materi). Namun, apabila ada kuliah tambahan/pengganti dari mayoritas member ataupun mentor, waktu kelas bisa disesuaikan lagi." />
                     <FAQQuestion question="Apakah Pertemuan Kelas CSC Nantinya Bersifat Offline atau Online?" answer="Rencana kami untuk angkatan tahun ini semua divisi dilaksanakan secara Offline, Namun masih dalam proses negosiasi dengan pihak jurusan. Akan kami beri informasi ter-update saat proposal kegiatan angkatan baru CSC sudah di approve oleh jurusan." />
                     <FAQQuestion question="Apa Persyaratan Masuk CSC?" answer="..." />
