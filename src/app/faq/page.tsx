@@ -8,7 +8,7 @@ import { TbMessageCircleQuestion } from "react-icons/tb";
 
 export default function FAQ() {
   return (
-    <div>
+    <div className="bg-[url('/bg-1.png')] overflow-x-hidden">
       <TopNav />
       <Navbar />
       <div className="w-full min-h-screen bg-[#090E1A] p-12 md:p-20">
