@@ -69,7 +69,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="min-h-full max-h-full min-w-full max-w-full md:min-w-[auto] overflow-hidden">
+        <div className="min-h-[auto] md:min-h-full max-h-full min-w-full max-w-full md:min-w-[auto] overflow-hidden">
           <img src="/coding.png" className="h-auto md:h-full w-full md:w-auto object-cover" />
         </div>
       </div>
