@@ -8,10 +8,10 @@ import { TbMessageCircleQuestion } from "react-icons/tb";
 
 export default function FAQ() {
   return (
-    <div className="bg-[url('/bg-1.png')] overflow-x-hidden">
+    <div className="bg-[#090E1A] overflow-x-hidden">
       <TopNav />
       <Navbar />
-      <div className="w-full min-h-screen bg-[#090E1A] p-12 md:p-20">
+      <div className="w-full min-h-screen  p-12 md:p-20">
         <div className="flex items-center gap-3 font-poppins font-bold">
           <TbMessageCircleQuestion className="text-[#6597E1] text-2xl" />
           <p className="bg-gradient-to-r from-[#6597E1] to-[#D2D2D3] bg-clip-text text-transparent uppercase">Tentang CSC</p>

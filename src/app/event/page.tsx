@@ -10,26 +10,33 @@ function Event() {
     {
       image: "/coding.png",
       date: "JANUARI 19,2024",
-      title: "CERITANYA EVENT CSC",
-      description: "Temukan Informasi Lengkap mengenai Computer Student Club",
+      title: "SEMINAR TECH FANTASY",
+      description: "CSC menjadi community partner bagi seminar block-chain yang diadakan oleh Metapals dan Filecoin berjudul Tech Fantasy. Pada event ini, dua member CSC berhasil meraih Door Prize Winner pada 2 kategori berbeda.",
     },
     {
       image: "/coding.png",
       date: "FEBRUARI 20,2024",
-      title: "EVENT 2",
-      description: "Temukan Informasi Lengkap mengenai Computer Student Club",
+      title: "GEBYAR ORMAWA",
+      description: "Adalah kegiatan pengenalan organisasi mahasiswa pada saat PKKP di Politeknik Negeri Jakarta. Di sini, kami mengenalkan serta mengajak para mahasiswa baru untuk bergabung dengan KSM CSC. ",
     },
     {
       image: "/coding.png",
       date: "MARET 21,2024",
-      title: "EVENT 3",
-      description: "Temukan Informasi Lengkap mengenai Computer Student Club",
+      title: "KMIPN V 2023",
+      description: "Kompetisi Mahasiswa Informatika Politeknik Nasional ke-5 yang digelar di PENS, Surabaya pada tahun 2023, Tim 05-Council dari CSC PNJ berhasil merebut Juara 2 pada bidang Keamanan Siber.",
     },
     {
       image: "/coding.png",
       date: "MARET 21,2024",
-      title: "EVENT 3",
-      description: "Temukan Informasi Lengkap mengenai Computer Student Club",
+      title: "Goes to Pesantren",
+      description:
+        "Adalah kegiatan sosialisasi kami kepada anak-anak pesantren atau panti asuhan di wilayah Depok dan sekitarnya.Kegiatan ini bertujuan untuk mengenalkan teknologi kepada anak-anak serta sebagai bentuk kebermanfaatan CSC kepada masyarakat.  ",
+    },
+    {
+      image: "/coding.png",
+      date: "MARET 21,2024",
+      title: "OSPF",
+      description: "Open Sharing Presenting and First Gathering adalah acara yang diselenggarakan bagi seluruh member CSC.  Kami berkumpul, sharing pengalaman dan ilmu, serta menjalin relasi dengan member dan alumni CSC.",
     },
   ];
   return (

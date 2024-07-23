@@ -11,7 +11,7 @@ export default function Navbar() {
         <p>Division</p>
         <Link href={"/event"}>Event</Link>
         <Link href="/faq">FAQ</Link>
-        <p>Contact</p>
+        <Link href={"/contact"}>Contact</Link>
         <button className="bg-primary text-white py-2 px-10 flex items-center gap-3">
           <FiPhone />
           <p>Join Us</p>

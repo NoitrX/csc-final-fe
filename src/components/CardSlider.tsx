@@ -33,7 +33,6 @@ const CardSlider: React.FC<CardSliderProps> = ({ slides }) => {
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
         slidesPerView={3}
-        navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
@@ -52,7 +51,7 @@ const CardSlider: React.FC<CardSliderProps> = ({ slides }) => {
         }}
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={index} className="p-4 border border-white">
+          <SwiperSlide key={index} className="p-4 border border-[#034AFF]">
             <div className="flex flex-col text-gray-300">
               <img src={slide.image} className="w-full h-56 object-cover" alt="" />
               <div className="flex items-center gap-2 mt-2">
