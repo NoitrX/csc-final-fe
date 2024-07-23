@@ -49,7 +49,7 @@ function Event() {
             </h1>
           </div>
 
-          <button className="text-white font-bold bg-[#071952] px-16 rounded-xl hover:bg-blue-500 transition-all duration-300 tracking-[1px]">VIEW ALL</button>
+          <button className="text-white font-bold bg-[#071952] px-16 py-2 mt-2 md:mt-0 rounded-sm md:rounded-xl hover:bg-blue-500 transition-all duration-300 tracking-[1px]">VIEW ALL</button>
         </div>
 
         <div className="">

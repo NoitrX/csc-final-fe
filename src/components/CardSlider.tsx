@@ -38,6 +38,18 @@ const CardSlider: React.FC<CardSliderProps> = ({ slides }) => {
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
+        breakpoints={{
+          400: {
+            slidesPerView: 1,
+          },
+
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="p-4 border border-white">
