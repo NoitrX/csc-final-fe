@@ -9,7 +9,7 @@ export default function Navbar() {
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
         <p>Division</p>
-        <p>Event</p>
+        <Link href={"/event"}>Event</Link>
         <Link href="/faq">FAQ</Link>
         <p>Contact</p>
         <button className="bg-primary text-white py-2 px-10 flex items-center gap-3">
