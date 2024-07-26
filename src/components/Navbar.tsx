@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="hidden md:flex items-center gap-3 lg:gap-10">
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
-        <p>Division</p>
+        <Link href={"/division"}>Division</Link>
         <Link href={"/event"}>Event</Link>
         <Link href="/faq">FAQ</Link>
         <Link href={"/contact"}>Contact</Link>
