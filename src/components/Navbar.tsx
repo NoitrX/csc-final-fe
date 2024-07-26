@@ -21,7 +21,7 @@ function HighlightedLink({ href, children }: { href: string; children: React.Rea
 export default function Navbar() {
   return (
     <nav className="w-full flex items-center justify-between font-ubuntu font-semibold text-base py-5 px-10 border-b bg-transparent border-black uppercase text-white">
-      <HighlightOnPath targetPath={"/"}><p>Logo</p></HighlightOnPath>
+      <HighlightedLink href={"/"}>Logo</HighlightedLink>
       <div className="hidden md:flex items-center gap-3 lg:gap-10">
         <HighlightedLink href={"/"}>Home</HighlightedLink>
         <HighlightedLink href={"/about"}>About</HighlightedLink>
