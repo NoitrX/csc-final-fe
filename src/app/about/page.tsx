@@ -7,7 +7,7 @@ import { BsArrow90DegDown, BsArrow90DegRight } from "react-icons/bs";
 
 export default function About() {
   return (
-    <div className="bg-[url('/bg-1.png')] bg-[url('/bg-1.png')] bg-cover bg-no-repeat w-full  overflow-x-hidden">
+    <div className="bg-[url('/bg-1.png')] bg-cover bg-no-repeat w-full  overflow-x-hidden">
       <TopNav />
       <Navbar />
       <div className="p-20 font-poppins font-bold text-white">
