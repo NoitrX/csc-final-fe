@@ -10,17 +10,17 @@ export default function Contact() {
   const contactUs = [
     {
       title: "DM VIA INSTAGRAM",
-      img: "/dicoding.png",
-      url: "https://www.instagram.com/dicoding.id/?hl=id",
+      img: "/instagram-png.png",
+      url: "https://www.instagram.com/cscpnj/",
     },
     {
-      title: "DM VIA INSTAGRAM",
-      img: "/dicoding.png",
-      url: "https://www.instagram.com/dicoding.id/?hl=id",
+      title: "GRUP WA Diskusi MABA 2023",
+      img: "/whatsapp-logo-png.png",
+      url: "chat.whatsapp.com/LqzdLnBJDeuFfkvabIriSU",
     },
     {
-      title: "DM VIA INSTAGRAM",
-      img: "/dicoding.png",
+      title: "Partnership Via Email",
+      img: "/email-13766.png",
       url: "https://www.instagram.com/dicoding.id/?hl=id",
     },
   ];
