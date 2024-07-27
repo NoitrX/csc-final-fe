@@ -22,7 +22,7 @@ function Division() {
         <div className="py-1 px-5 border-b border-white">
           <p className="font-bold text-4xl uppercase bg-gradient-to-r from-white to-[#3876D3] bg-clip-text text-transparent">ABOUT</p>
         </div>
-        <p className="text-sm text-justify md:text-start  px-24 md:px-48 ">
+        <p className="text-sm text-justify md:text-center px-24 md:px-48 ">
           Divisi yang mempelajari dasar-dasar ethical hacking dan penetration testing. Para member akan diajari teknik-teknik peretasan yang umum digunakan serta syarat-syarat peretasan yang dianggap sah atau legal. Selain itu, para member
           di-support untuk aktif mengikuti kompetisi seperti Capture The Flag (CTF) dan lain-lain. Komunitas yang sehat dan terus belajar diharapkan terbentuk dari divisi ini.
         </p>
@@ -61,7 +61,7 @@ function Division() {
         <div className="py-1 px-5 border-b border-white">
           <p className="font-bold text-4xl uppercase bg-gradient-to-r from-white to-[#3876D3] bg-clip-text text-transparent">ABOUT</p>
         </div>
-        <p className="text-sm text-justify md:text-start  px-24 md:px-48 ">
+        <p className="text-sm text-justify md:text-center  px-24 md:px-48 ">
           Divisi yang menggali dunia pemrograman dengan berfokus pada bahasa pemrograman, teknologi, dan konsep Pemrograman Berorientasi Objek (OOP). Kami menyelenggarakan berbagai proyek pengembangan perangkat lunak dan kompetisi
           pemrograman, serta berbagi sumber daya belajar dan tutorial bagi anggota kami. Divisi ini menjadi tempat yang ideal bagi individu yang ingin memperluas pengetahuan mereka dalam pengembangan perangkat lunak, baik untuk pemula
           maupun mereka yang telah memiliki pengalaman sebelumnya dalam dunia pemrograman. 
@@ -100,7 +100,7 @@ function Division() {
         <div className="py-1 px-5 border-b border-white">
           <p className="font-bold text-4xl uppercase bg-gradient-to-r from-white to-[#3876D3] bg-clip-text text-transparent">ABOUT</p>
         </div>
-        <p className="text-sm text-justify md:text-start  px-24 md:px-48 ">
+        <p className="text-sm text-justify md:text-center px-24 md:px-48 ">
           Divisi yang memperkenalkan dunia dari Internet of Things (IoT) dan teknologi fisik. Kami mengeksplorasi konsep dasar IoT dan memberikan kesempatan bagi Anda untuk terlibat dalam praktik perakitan perangkat keras, eksperimen IoT,
           serta pengenalan komponen-komponen komputer. Di sini, kami mengundang Anda untuk menjelajahi kreativitas Anda dalam menciptakan solusi yang inovatif, yang dapat menghubungkan dunia fisik dengan dunia digital. Bergabunglah dengan
           kami dan temukan bagaimana teknologi dapat mengubah cara kita berinteraksi dengan lingkungan sekitar.  

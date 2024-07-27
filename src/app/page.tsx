@@ -25,11 +25,11 @@ export default function Home() {
         </div>
         <p className="font-ubuntu font-bold text-2xl">#UnlimitedConnectionID</p>
         <div className="flex flex-col md:flex-row mt-10 gap-3 md:gap-32">
-          <button className="flex items-center py-2 px-16 border-2 border-white font-bold gap-5 font-ubuntu">
+          <button className="flex items-center py-2 px-16 border-2 border-white font-bold gap-5 font-ubuntu hover:bg-blue-700 transition-all duration-200">
             <FiBookmark />
             <p className="uppercase">Learn More</p>
           </button>
-          <button className="flex items-center py-2 px-16 bg-primary text-white font-bold gap-5 font-ubuntu">
+          <button className="flex items-center py-2 px-16 bg-primary text-white font-bold gap-5 font-ubuntu hover:bg-blue-700 transition-all duration-200">
             <FiPhone />
             <p className="uppercase">Contact Us</p>
           </button>
@@ -50,7 +50,7 @@ export default function Home() {
               mahasiswa serta meningkatkan prestasi mereka dalam bidang teknologi.
             </p>
           </div>
-          <button className="w-full bg-primary flex justify-center items-center gap-3 py-3">
+          <button className="w-full bg-primary flex justify-center items-center gap-3 py-3 hover:bg-blue-700 transition-all duration-200">
             <FaMagnifyingGlass />
             <p className="font-ubuntu font-bold text-sm uppercase">About CSC</p>
           </button>
