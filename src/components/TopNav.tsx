@@ -2,6 +2,7 @@ import { AiOutlineFacebook } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 import { FiInstagram, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function TopNav() {
   return (
@@ -22,9 +23,18 @@ export default function TopNav() {
         </div>
       </div>
       <div className="w-full md:w-auto justify-end flex items-center gap-5 text-xl">
-        <AiOutlineFacebook />
-        <FiInstagram />
-        <FaLinkedin />
+        <Link href={"https://www.facebook.com/CSCPNJ/?locale=it_IT&_rdr"} className="cursor-pointer">
+          {" "}
+          <AiOutlineFacebook />
+        </Link>
+        <Link href={"https://www.instagram.com/cscpnj/?hl=id"}>
+          <FiInstagram />
+        </Link>
+
+        <Link href={"https://www.linkedin.com/company/computer-student-club/?originalSubdomain=id"}>
+          <FaLinkedin />
+        </Link>
+
         <p className="text-lg">|</p>
         <Image src="/id.svg" alt="ID" width={24} height={18} />
       </div>

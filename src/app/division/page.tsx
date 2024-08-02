@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import TopNav from "@/components/TopNav";
+import Link from "next/link";
 import React from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { FaChevronDown } from "react-icons/fa";
@@ -41,9 +42,9 @@ function Division() {
         <div className="flex flex-col">
           <h2 className="text-3xl font-bold uppercase">LINKS</h2>
           <h2 className="text-3xl font-bold uppercase">SILABUS DIVISI CYBER SECURITY</h2>
-          <a href="" className="underline">
+          <Link href={"https://drive.google.com/file/d/1VU7ZppllIVihHJnFXuN7hQW9PjWuiWLy/view"} className="underline">
             Silabus Cyber Sec
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -81,9 +82,9 @@ function Division() {
         <div className="flex flex-col">
           <h2 className="text-3xl font-bold uppercase">LINKS</h2>
           <h2 className="text-3xl font-bold uppercase">SILABUS DIVISI SoftDev</h2>
-          <a href="" className="underline">
+          <Link href={"https://docs.google.com/document/d/1ePnv0wGObce5oArHNT96i-AATvp79az5apFK7QNV5ng/edit"} className="underline">
             Silabus SoftDev
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -121,9 +122,9 @@ function Division() {
         <div className="flex flex-col">
           <h2 className="text-3xl font-bold uppercase">LINKS</h2>
           <h2 className="text-3xl font-bold uppercase">SILABUS DIVISI EXPLORE</h2>
-          <a href="" className="underline">
+          <Link href={"https://docs.google.com/document/d/1cbfB-5ni2MjKKhuxEsjybvWSSAGGHIO8J8jTMe_9s98/edit"} className="underline">
             Silabus EXPLORE
-          </a>
+          </Link>
         </div>
       </div>
       <Footer />

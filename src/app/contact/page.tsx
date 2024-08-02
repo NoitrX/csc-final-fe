@@ -16,12 +16,12 @@ export default function Contact() {
     {
       title: "GRUP WA Diskusi MABA 2023",
       img: "/whatsapp-logo-png.png",
-      url: "chat.whatsapp.com/LqzdLnBJDeuFfkvabIriSU",
+      url: "https://chat.whatsapp.com/LqzdLnBJDeuFfkvabIriSU",
     },
     {
-      title: "Partnership Via Email",
+      title: "PARTNERSHIP VIA EMAIL",
       img: "/email-13766.png",
-      url: "https://www.instagram.com/dicoding.id/?hl=id",
+      url: "mailto:csc.pnj@gmail.com",
     },
   ];
   return (

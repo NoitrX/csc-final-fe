@@ -5,9 +5,6 @@ import { BsBookmark, BsBoxArrowInUpRight } from "react-icons/bs";
 import { MdOutlineEvent, MdOutlineEventAvailable } from "react-icons/md";
 import { FaRegQuestionCircle } from "react-icons/fa";
 import { CiPhone } from "react-icons/ci";
-import { AiOutlineFullscreen } from "react-icons/ai";
-import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { IoMdTime } from "react-icons/io";
 import { FiAlignRight } from "react-icons/fi";
 import { useState } from "react";
 

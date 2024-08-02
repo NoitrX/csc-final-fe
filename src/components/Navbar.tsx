@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -40,7 +39,7 @@ export default function Navbar() {
           <HighlightedLink href={"/contact"}>Contact</HighlightedLink>
           <button className="bg-primary text-white py-2 px-10 flex items-center gap-3 hover:bg-blue-700 transition-all duration-200">
             <FiPhone />
-            <p>Join Us</p>
+            <Link href={"https://chat.whatsapp.com/LqzdLnBJDeuFfkvabIriSU"}>Join Us</Link>
           </button>
         </div>
         <div className="md:hidden flex items-center">

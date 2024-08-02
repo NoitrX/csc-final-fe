@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { FiBookmark, FiPhone } from "react-icons/fi";
 import { FaRegSnowflake } from "react-icons/fa";
 import { FaHeadphones, FaMagnifyingGlass } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -25,13 +26,15 @@ export default function Home() {
         </div>
         <p className="font-ubuntu font-bold text-2xl">#UnlimitedConnectionID</p>
         <div className="flex flex-col md:flex-row mt-10 gap-3 md:gap-32">
-          <button className="flex items-center py-2 px-16 border-2 border-white font-bold gap-5 font-ubuntu hover:bg-blue-700 transition-all duration-200">
+          <Link href={"/about"} className="flex items-center py-2 px-16 border-2 border-white font-bold gap-5 font-ubuntu hover:bg-blue-700 transition-all duration-200">
             <FiBookmark />
             <p className="uppercase">Learn More</p>
-          </button>
+          </Link>
           <button className="flex items-center py-2 px-16 bg-primary text-white font-bold gap-5 font-ubuntu hover:bg-blue-700 transition-all duration-200">
             <FiPhone />
-            <p className="uppercase">Contact Us</p>
+            <Link href={"https://chat.whatsapp.com/LqzdLnBJDeuFfkvabIriSU"} className="uppercase">
+              Contact Us
+            </Link>
           </button>
         </div>
       </div>
@@ -50,10 +53,10 @@ export default function Home() {
               mahasiswa serta meningkatkan prestasi mereka dalam bidang teknologi.
             </p>
           </div>
-          <button className="w-full bg-primary flex justify-center items-center gap-3 py-3 hover:bg-blue-700 transition-all duration-200">
+          <Link href={"/about"} className="w-full bg-primary flex justify-center items-center gap-3 py-3 hover:bg-blue-700 transition-all duration-200">
             <FaMagnifyingGlass />
             <p className="font-ubuntu font-bold text-sm uppercase">About CSC</p>
-          </button>
+          </Link>
           <div className="flex flex-col lg:flex-row items-end gap-10">
             <div className="border-b border-[#6597E1] py-2 flex items-center font-poppins font-bold text-3xl gap-3 w-full h-full">
               <p className="bg-gradient-to-r from-[#6597E1] to-[#999999] bg-clip-text text-transparent">100++</p>

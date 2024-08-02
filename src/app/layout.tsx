@@ -19,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${bigShouldersInlineText.variable} ${poppins.variable} ${robotoFlex.variable} ${ubuntu.variable}`}>{children}</body>
+      <body suppressHydrationWarning={true} className={`${bigShouldersInlineText.variable} ${poppins.variable} ${robotoFlex.variable} ${ubuntu.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
