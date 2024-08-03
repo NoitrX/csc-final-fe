@@ -1,12 +1,15 @@
 "use client";
 import Thead from "@/components/Thead";
+import { FaRegEdit, FaRegTrashAlt } from "react-icons/fa";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { showConfirmDeleteAlert } from "@/utils/alert";
 
 function AboutPage() {
   const [data, setData] = useState<AboutData[]>([]);
 
   interface AboutData {
+    id: number;
     description: string;
     vision: string;
     mission: string;
@@ -30,6 +33,14 @@ function AboutPage() {
     }
   };
 
+  const handleDelete = async (id: number) => {
+    try {
+      showConfirmDeleteAlert(`http://localhost:9000/api/csc/about/delete/${id}`);
+      getAboutData();
+    } catch (err) {
+      console.log(err);
+    }
+  };
   useEffect(() => {
     getAboutData();
   }, []);
@@ -52,7 +63,16 @@ function AboutPage() {
                 {data.map((d: AboutData, i) => {
                   return (
                     <tr className="text-center" key={i}>
-                      <td className="py-2 px-4 border-b border-gray-200">{i + 1}</td>
+                      <td className="py-2 px-4  border-gray-200">
+                        <div className="flex justify-center items-center gap-2">
+                          <Link href={`/admin/dashboard/about/edit/${d.id}`}>
+                            <FaRegEdit className="text-2xl text-orange-500" />
+                          </Link>
+                          <p onClick={() => handleDelete(d.id)}>
+                            <FaRegTrashAlt className="text-2xl text-red-500" />
+                          </p>
+                        </div>
+                      </td>
                       <td className="py-2 px-4 border-b border-gray-200">{d.description}</td>
                       <td className="py-2 px-4 border-b border-gray-200">{d.vision}</td>
                       <td className="py-2 px-4 border-b border-gray-200">{d.mission}</td>
