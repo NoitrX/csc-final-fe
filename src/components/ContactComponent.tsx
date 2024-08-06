@@ -18,7 +18,7 @@ const ContactComponent: React.FC<ContentProps> = ({ contents }) => {
       {contents.map((content, index) => (
         <div key={index} className="flex ">
           <div className="flex flex-col justify-between items-center">
-            <img src={content.img} className="w-64" alt="" />
+            <img src={`http://localhost:9000/${content.img}`} className="w-64" alt="" />
             <h2 className="text-center mx-12 mt-2">{content.title}</h2>
             <Link className="border border-gray-900 px-12 py-2 bg-[#071952] mt-3 rounded-lg hover:bg-blue-400 transition-all duration-200" href={content.url}>
               Click Here

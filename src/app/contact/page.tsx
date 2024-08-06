@@ -1,29 +1,38 @@
+"use client";
 import ContactComponent from "@/components/ContactComponent";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import TopNav from "@/components/TopNav";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 
 export default function Contact() {
-  const contactUs = [
-    {
-      title: "DM VIA INSTAGRAM",
-      img: "/instagram-png.png",
-      url: "https://www.instagram.com/cscpnj/",
-    },
-    {
-      title: "GRUP WA Diskusi MABA 2023",
-      img: "/whatsapp-logo-png.png",
-      url: "https://chat.whatsapp.com/LqzdLnBJDeuFfkvabIriSU",
-    },
-    {
-      title: "PARTNERSHIP VIA EMAIL",
-      img: "/email-13766.png",
-      url: "mailto:csc.pnj@gmail.com",
-    },
-  ];
+  const [data, setData] = useState<Content[]>([]);
+
+  interface Content {
+    title: string;
+    img: string;
+    url: string;
+  }
+  const getDataAbout = () => {
+    try {
+      fetch(`http://localhost:9000/api/csc/contact`)
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          setData(data.data);
+        });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    getDataAbout();
+  }, []);
+
   return (
     <div className="bg-[url('/bg-1.png')] bg-cover bg-no-repeat w-full overflow-x-hidden">
       <TopNav />
@@ -37,7 +46,7 @@ export default function Contact() {
         <p className="text-sm mt-2">Temukan informasi lengkap mengenai Computer Student Club</p>
       </div>
       <div className="w-full bg-[#090f1f]  py-24 ">
-        <ContactComponent contents={contactUs} />
+        <ContactComponent contents={data} />
       </div>
 
       <Footer />

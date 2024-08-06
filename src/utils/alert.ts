@@ -14,7 +14,7 @@ export async function showConfirmDeleteAlert(url: string) {
     title: "Do you want to Delete?",
     showDenyButton: true,
     showCancelButton: true,
-    confirmButtonText: "Save",
+    confirmButtonText: "Delete",
     denyButtonText: `Don't save`,
   }).then(async (result) => {
     if (result.isConfirmed) {

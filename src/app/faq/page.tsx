@@ -5,8 +5,35 @@ import Navbar from "@/components/Navbar";
 import FAQQuestion from "@/components/FAQQuestion";
 import Footer from "@/components/Footer";
 import { TbMessageCircleQuestion } from "react-icons/tb";
+import { useEffect, useState } from "react";
 
 export default function FAQ() {
+  const [data, setData] = useState<AboutData[]>([]);
+
+  interface AboutData {
+    id: number;
+    title: string;
+    description: string;
+    createdAt: string;
+    updatedAt: string;
+  }
+  const getDataFaq = () => {
+    try {
+      fetch(`http://localhost:9000/api/csc/faq`)
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          setData(data.data);
+        });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    getDataFaq();
+  }, []);
   return (
     <div className="bg-[#090E1A] overflow-x-hidden">
       <TopNav />
@@ -30,36 +57,11 @@ export default function FAQ() {
           </p>
         </div>
         <div className="w-full flex flex-col gap-10 mt-10">
-          <FAQQuestion
-            question="Kapan Registrasi Member Baru Dibuka?"
-            answer={
-              <>
-                Pendaftaran KSM biasanya dimulai pada semester 2, Pantau terus{" "}
-                <a className="underline" href="https://instagram.com/cscpnj">
-                  Instagram CSC
-                </a>{" "}
-                untuk informasi lebih lanjut.
-              </>
-            }
-          />
-          <FAQQuestion
-            question="Pertemuan KSM CSC Setiap Hari Apa?"
-            answer="Normalnya, kelas diadakan tiap hari Sabtu jam 9 sampai selesai (Sesi kelas biasanya 2-4 Jam tergantung materi). Namun, apabila ada kuliah tambahan/pengganti dari mayoritas member ataupun mentor, waktu kelas bisa disesuaikan lagi."
-          />
-          <FAQQuestion
-            question="Apakah Pertemuan Kelas CSC Nantinya Bersifat Offline atau Online?"
-            answer="Rencana kami untuk angkatan tahun ini semua divisi dilaksanakan secara Offline, Namun masih dalam proses negosiasi dengan pihak jurusan. Akan kami beri informasi ter-update saat proposal kegiatan angkatan baru CSC sudah di approve oleh jurusan."
-          />
-          <FAQQuestion question="Apa Persyaratan Masuk CSC?" answer="..." />
-          <FAQQuestion
-            question="Apa Mahasiswa Jurusan Selain TIK Boleh Mendaftar Sebagai Anggota CSC?"
-            answer="Boleh banget! Soalnya CSC akan mengajarkan konsep dasar tiap divisi secara langsung, dan mentor akan memantau progress tiap member supaya tidak tertinggal. Jadi walau kamu tidak memiliki dasar sama sekali di divisi-divisi kami, tetap bisa mengikuti kegiatan CSC"
-          />
-          <FAQQuestion question="Apa Perbedaan CSC dengan Sahabat PNJ? / Lebih Cocok Masuk CSC atau SPNJ Ya?" answer="..." />
-          <FAQQuestion
-            question="Apa Boleh Join Lebih dari Satu Divisi?"
-            answer="Tiap member cuman boleh join 1 divisi ya, Kalo kamu masih bimbang pengen join divisi mana, boleh konsultasi dengan kami via grup WA diskusi untuk nemuin divisi mana yang paling cocok sama kamu!"
-          />
+          {data.map((data) => (
+            <>
+              <FAQQuestion question={data.title} answer={data.description} />
+            </>
+          ))}
         </div>
       </div>
       <Footer />
