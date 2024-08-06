@@ -9,9 +9,7 @@ import React, { useState } from "react";
 export default function AddAbout() {
   const router = useRouter();
   const [form, setForm] = useState({
-    description: "",
-    vision: "",
-    mission: "",
+    headerImage: "",
     img: undefined,
     title_img: "",
   });
@@ -58,12 +56,10 @@ export default function AddAbout() {
         <hr className="mt-2" />
         <form className="w-full">
           <div className="mt-3 flex w-full justify-between gap-3">
-            <InputLabel errors={alert.msg} label="Description" type="text" placeholder="Enter Description" name="description" value={form.description} onChange={handleChange} />
-            <InputLabel errors={alert.msg} label="Vision" type="text" placeholder="Enter Vision" name="vision" value={form.vision} onChange={handleChange} />
+            <InputLabel errors={alert.msg} label="Header Image" type="text" placeholder="Enter Header Image" name="headerImage" value={form.headerImage} onChange={handleChange} />
           </div>
 
           <div className="mt-3 flex w-full justify-between gap-3">
-            <InputLabel errors={alert.msg} label="Mission" type="text" placeholder="Enter Mission" name="mission" value={form.mission} onChange={handleChange} />
             <InputLabel errors={alert.msg} label="Image" type="file" placeholder="Enter Image" name="img" onChange={handleChange} />
           </div>
 

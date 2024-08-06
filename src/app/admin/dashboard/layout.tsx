@@ -3,6 +3,7 @@
 import { IoHomeOutline, IoExitOutline } from "react-icons/io5";
 import { BsBookmark, BsBoxArrowInUpRight } from "react-icons/bs";
 import { MdOutlineEvent, MdOutlineEventAvailable } from "react-icons/md";
+import { DiAndroid } from "react-icons/di";
 import { FaRegQuestionCircle } from "react-icons/fa";
 import { CiPhone } from "react-icons/ci";
 import { FiAlignRight } from "react-icons/fi";
@@ -52,17 +53,16 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       icon: <BsBookmark />,
       name: "About",
     },
+    {
+      link: "/admin/dashboard/division",
+      icon: <DiAndroid />,
+      name: "Division",
+    },
 
     {
       link: "/admin/dashboard/event",
       icon: <MdOutlineEvent />,
       name: "Event",
-    },
-
-    {
-      link: "/admin/dashboard/eventDetail",
-      icon: <MdOutlineEventAvailable />,
-      name: "Event Detail",
     },
 
     {

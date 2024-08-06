@@ -10,9 +10,7 @@ function AboutPage() {
 
   interface AboutData {
     id: number;
-    description: string;
-    vision: string;
-    mission: string;
+    headerImage: string;
     img: string;
     title_img: string;
     createdAt: string;
@@ -35,8 +33,8 @@ function AboutPage() {
 
   const handleDelete = async (id: number) => {
     try {
-      showConfirmDeleteAlert(`http://localhost:9000/api/csc/about/delete/${id}`);
-      getAboutData();
+      await showConfirmDeleteAlert(`http://localhost:9000/api/csc/about/delete/${id}`);
+      await getAboutData();
     } catch (err) {
       console.log(err);
     }
@@ -58,7 +56,7 @@ function AboutPage() {
 
           <div className="overflow-x-auto">
             <table className="min-w-full bg-white border border-gray-200">
-              <Thead theads={["#", "Description", "Vision", "Mission", "Img", "Title Img", "Log"]} />
+              <Thead theads={["#", "Header Image", "Img", "Title Img", "Log"]} />
               <tbody className="text-xs">
                 {data.map((d: AboutData, i) => {
                   return (
@@ -73,10 +71,9 @@ function AboutPage() {
                           </p>
                         </div>
                       </td>
-                      <td className="py-2 px-4 border-b border-gray-200">{d.description}</td>
-                      <td className="py-2 px-4 border-b border-gray-200">{d.vision}</td>
-                      <td className="py-2 px-4 border-b border-gray-200">{d.mission}</td>
+
                       <td className="py-2 px-4 border-b border-gray-200">{d.img ? <img src={`http://localhost:9000/${d.img}`} alt="" className="w-24" /> : "No Image"}</td>
+                      <td className="py-2 px-4 border-b border-gray-200">{d.headerImage}</td>
                       <td className="py-2 px-4 border-b border-gray-200">{d.title_img}</td>
                       <td className="py-2 px-4 border-b border-gray-200">{d.createdAt}</td>
                     </tr>
