@@ -29,7 +29,12 @@ export default function Navbar() {
   return (
     <div>
       <nav className="w-full flex items-center justify-between font-ubuntu font-semibold text-base py-5 px-10 border-b bg-transparent border-black uppercase text-white">
-        <HighlightedLink href={"/"}>Logo</HighlightedLink>
+        <HighlightedLink href={"/"}>
+          <div className="flex jusify-center gap-3 items-center">
+            <img src="/csc-logo.png" className="w-12" alt="" />
+            <p>COMPUTER STUDENT CLUB</p>
+          </div>
+        </HighlightedLink>
         <div className="hidden md:flex items-center gap-3 lg:gap-10">
           <HighlightedLink href={"/"}>Home</HighlightedLink>
           <HighlightedLink href={"/about"}>About</HighlightedLink>

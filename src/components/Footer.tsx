@@ -20,7 +20,7 @@ export default function Footer() {
           <FaLinkedin className="text-[#ffff]" />
         </Link>
       </div>
-      <p className="font-ubuntu font-bold text-[#ffff] uppercase">Logo</p>
+      <img src="/csc-logo.png" className="w-12" alt="" />
       <p className="text-[#ffff] text-xs font-poppins">&copy;Copyright 2024 - Computer Student Club</p>
     </div>
   );

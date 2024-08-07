@@ -22,7 +22,7 @@ export default function Home() {
           Kami adalah kelompok studi mahasiswa di bawah naungan jurusan TIK Politeknik Negeri Jakarta. Berfokus pada pengembangan minat dan bakat mahasiswa serta meningkatkan capaian prestasi mahasiswa. 
         </p>
         <div className="w-48 h-48 rounded-full border border-white flex items-center justify-center">
-          <p className="font-big-shoulders-inline-text text-6xl">CSC</p>
+          <img src="/csc-logo.png" alt="" />
         </div>
         <p className="font-ubuntu font-bold text-2xl">#UnlimitedConnectionID</p>
         <div className="flex flex-col md:flex-row mt-10 gap-3 md:gap-32">
