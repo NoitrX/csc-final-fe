@@ -2,6 +2,7 @@
 import TopNav from "@/components/TopNav";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { BASE_URL, API_ABOUT } from "@/utils/apiUrls";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { FaChevronDown } from "react-icons/fa6";
 import { BsArrow90DegDown, BsArrow90DegRight } from "react-icons/bs";
@@ -20,7 +21,7 @@ export default function About() {
   }
   const getDataAbout = () => {
     try {
-      fetch(`http://localhost:9000/api/csc/about`)
+      fetch(API_ABOUT)
         .then((res) => {
           return res.json();
         })
@@ -123,7 +124,7 @@ export default function About() {
                   <p>President CSC</p>
                 </div>
                 <div className="min-w-64 max-w-[50%]">
-                  <img src={`http://localhost:9000/${item.img}`} className="w-full" />
+                  <img src={`${BASE_URL}/${item.img}`} className="w-full" />
                 </div>
                 <div className="relative hidden md:flex font-medium mt-[10%]">
                   <BsArrow90DegRight className="rotate-45 absolute -left-5 -top-5 text-2xl" />

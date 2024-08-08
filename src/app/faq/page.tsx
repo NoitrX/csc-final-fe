@@ -6,6 +6,7 @@ import FAQQuestion from "@/components/FAQQuestion";
 import Footer from "@/components/Footer";
 import { TbMessageCircleQuestion } from "react-icons/tb";
 import { useEffect, useState } from "react";
+import { API_FAQ } from "@/utils/apiUrls";
 
 export default function FAQ() {
   const [data, setData] = useState<AboutData[]>([]);
@@ -19,7 +20,7 @@ export default function FAQ() {
   }
   const getDataFaq = () => {
     try {
-      fetch(`http://localhost:9000/api/csc/faq`)
+      fetch(API_FAQ)
         .then((res) => {
           return res.json();
         })

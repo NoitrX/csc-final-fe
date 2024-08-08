@@ -7,6 +7,7 @@ import XButton from "@/components/XButton";
 import axios from "axios";
 import { showSuccessAlert } from "@/utils/alert";
 import { useRouter } from "next/navigation";
+import { API_EVENT } from "@/utils/apiUrls";
 
 interface Props {
   params: { id: string };
@@ -22,7 +23,7 @@ const EditEvent: NextPage<Props> = ({ params }: { params: { id: string } }) => {
   });
   const getDataNow = async () => {
     try {
-      const newRes = await axios.get(`http://localhost:9000/api/csc/event/${params.id}`);
+      const newRes = await axios.get(`${API_EVENT}/${params.id}`);
       setForm(newRes.data.data);
     } catch (err) {
       console.log(err);
@@ -49,7 +50,7 @@ const EditEvent: NextPage<Props> = ({ params }: { params: { id: string } }) => {
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     try {
-      await axios.put("http://localhost:9000/api/csc/event/update/" + params.id, form, {
+      await axios.put(API_EVENT + "/update/" + params.id, form, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

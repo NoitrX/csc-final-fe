@@ -4,6 +4,7 @@ import { FaRegEdit, FaRegTrashAlt } from "react-icons/fa";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { showConfirmDeleteAlert } from "@/utils/alert";
+import { API_EVENT, BASE_URL } from "@/utils/apiUrls";
 
 function EventPage() {
   const [data, setData] = useState<EventData[]>([]);
@@ -20,7 +21,7 @@ function EventPage() {
 
   const getEventData = () => {
     try {
-      fetch(`http://localhost:9000/api/csc/event`)
+      fetch(API_EVENT)
         .then((res) => {
           return res.json();
         })
@@ -34,7 +35,7 @@ function EventPage() {
 
   const handleDelete = async (id: number) => {
     try {
-      await showConfirmDeleteAlert(`http://localhost:9000/api/csc/event/delete/${id}`);
+      await showConfirmDeleteAlert(`${API_EVENT}/delete/${id}`);
       await getEventData();
     } catch (err) {
       console.log(err);
@@ -72,7 +73,7 @@ function EventPage() {
                           </p>
                         </div>
                       </td>
-                      <td className="py-2 px-4 border-b border-gray-200">{d.img_event ? <img src={`http://localhost:9000/${d.img_event}`} alt="" className="w-24" /> : "No Image"}</td>
+                      <td className="py-2 px-4 border-b border-gray-200">{d.img_event ? <img src={`${BASE_URL}/${d.img_event}`} alt="" className="w-24" /> : "No Image"}</td>
                       <td className="py-2 px-4 border-b border-gray-200">{d.description}</td>
                       <td className="py-2 px-4 border-b border-gray-200">{d.title_img}</td>
                       <td className="py-2 px-4 border-b border-gray-200">{d.dateEvent}</td>

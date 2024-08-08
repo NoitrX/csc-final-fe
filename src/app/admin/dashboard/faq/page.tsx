@@ -4,6 +4,7 @@ import { FaRegEdit, FaRegTrashAlt } from "react-icons/fa";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { showConfirmDeleteAlert } from "@/utils/alert";
+import { API_FAQ } from "@/utils/apiUrls";
 
 function FaqPage() {
   const [data, setData] = useState<FaqData[]>([]);
@@ -16,7 +17,7 @@ function FaqPage() {
 
   const getAboutData = () => {
     try {
-      fetch(`http://localhost:9000/api/csc/faq`)
+      fetch(API_FAQ)
         .then((res) => {
           return res.json();
         })
@@ -30,7 +31,7 @@ function FaqPage() {
 
   const handleDelete = async (id: number) => {
     try {
-      await showConfirmDeleteAlert(`http://localhost:9000/api/csc/faq/delete/${id}`);
+      await showConfirmDeleteAlert(`${API_FAQ}/delete/${id}`);
       await getAboutData();
     } catch (err) {
       console.log(err);

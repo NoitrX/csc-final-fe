@@ -7,6 +7,7 @@ import { FaChevronDown } from "react-icons/fa6";
 import { BsArrow90DegDown, BsArrow90DegRight } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { API_JOIN_US } from "@/utils/apiUrls";
 
 export default function About() {
   const [data, setData] = useState<JoinUsData[]>([]);
@@ -21,7 +22,7 @@ export default function About() {
   }
   const getDataAbout = () => {
     try {
-      fetch(`http://localhost:9000/api/csc/join_us`)
+      fetch(API_JOIN_US)
         .then((res) => {
           return res.json();
         })

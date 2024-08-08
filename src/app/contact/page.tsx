@@ -3,6 +3,7 @@ import ContactComponent from "@/components/ContactComponent";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import TopNav from "@/components/TopNav";
+import { API_CONTACT } from "@/utils/apiUrls";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -17,7 +18,7 @@ export default function Contact() {
   }
   const getDataAbout = () => {
     try {
-      fetch(`http://localhost:9000/api/csc/contact`)
+      fetch(API_CONTACT)
         .then((res) => {
           return res.json();
         })

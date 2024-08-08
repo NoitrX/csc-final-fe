@@ -4,6 +4,7 @@ import { FaRegEdit, FaRegTrashAlt } from "react-icons/fa";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { showConfirmDeleteAlert } from "@/utils/alert";
+import { API_CONTACT, BASE_URL } from "@/utils/apiUrls";
 
 function ContactPage() {
   const [data, setData] = useState<ContactData[]>([]);
@@ -19,7 +20,7 @@ function ContactPage() {
 
   const getAboutData = () => {
     try {
-      fetch(`http://localhost:9000/api/csc/contact`)
+      fetch(API_CONTACT)
         .then((res) => {
           return res.json();
         })
@@ -33,7 +34,7 @@ function ContactPage() {
 
   const handleDelete = async (id: number) => {
     try {
-      await showConfirmDeleteAlert(`http://localhost:9000/api/csc/contact/delete/${id}`);
+      await showConfirmDeleteAlert(`${API_CONTACT}/delete/${id}`);
       await getAboutData();
     } catch (err) {
       console.log(err);
@@ -71,7 +72,7 @@ function ContactPage() {
                           </p>
                         </div>
                       </td>
-                      <td className="py-2 px-4 border-b border-gray-200">{d.img ? <img src={`http://localhost:9000/${d.img}`} alt="" className="w-24" /> : "No Image"}</td>
+                      <td className="py-2 px-4 border-b border-gray-200">{d.img ? <img src={`${BASE_URL}/${d.img}`} alt="" className="w-24" /> : "No Image"}</td>
                       <td className="py-2 px-4 border-b border-gray-200">{d.title}</td>
                       <td className="py-2 px-4 border-b border-gray-200">{d.url}</td>
                       <td className="py-2 px-4 border-b border-gray-200">{d.createdAt}</td>

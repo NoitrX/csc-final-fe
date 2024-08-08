@@ -2,6 +2,7 @@
 import InputLabel from "@/components/InputLabel";
 import XButton from "@/components/XButton";
 import { showSuccessAlert } from "@/utils/alert";
+import { API_ABOUT } from "@/utils/apiUrls";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
@@ -32,7 +33,7 @@ export default function AddAbout() {
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:9000/api/csc/about", form, {
+      await axios.post(API_ABOUT, form, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

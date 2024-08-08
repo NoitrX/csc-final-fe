@@ -4,6 +4,7 @@ import { FaRegEdit, FaRegTrashAlt } from "react-icons/fa";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { showConfirmDeleteAlert } from "@/utils/alert";
+import { API_DIVISION, BASE_URL } from "@/utils/apiUrls";
 
 function DivisionPage() {
   const [data, setData] = useState<DivisionData[]>([]);
@@ -21,7 +22,7 @@ function DivisionPage() {
 
   const getDivisionData = () => {
     try {
-      fetch(`http://localhost:9000/api/csc/division`)
+      fetch(API_DIVISION)
         .then((res) => {
           return res.json();
         })
@@ -35,7 +36,7 @@ function DivisionPage() {
 
   const handleDelete = async (id: number) => {
     try {
-      await showConfirmDeleteAlert(`http://localhost:9000/api/csc/division/delete/${id}`);
+      await showConfirmDeleteAlert(`${API_DIVISION}/delete/${id}`);
       await getDivisionData();
     } catch (err) {
       console.log(err);
@@ -75,7 +76,7 @@ function DivisionPage() {
                       </td>
                       <td className="py-2 px-4 border-b border-gray-200">{d.title_division}</td>
                       <td className="py-2 px-4 border-b border-gray-200">{d.description}</td>
-                      <td className="py-2 px-4 border-b border-gray-200">{d.image_division ? <img src={`http://localhost:9000/${d.image_division}`} alt="" className="w-24" /> : "No Image"}</td>
+                      <td className="py-2 px-4 border-b border-gray-200">{d.image_division ? <img src={`${BASE_URL}/${d.image_division}`} alt="" className="w-24" /> : "No Image"}</td>
                       <td className="py-2 px-4 border-b border-gray-200">{d.focus_area}</td>
                       <td className="py-2 px-4 border-b border-gray-200">{d.link_silabus}</td>
                       <td className="py-2 px-4 border-b border-gray-200">{d.createdAt}</td>

@@ -2,6 +2,7 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import TopNav from "@/components/TopNav";
+import { API_EVENT, BASE_URL } from "@/utils/apiUrls";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { MdEventNote } from "react-icons/md";
@@ -21,7 +22,7 @@ function EventDetailPage({ params }: { params: { id: string } }) {
 
   const getDataNow = async () => {
     try {
-      const newRes = await axios.get(`http://localhost:9000/api/csc/event/${params.id}`);
+      const newRes = await axios.get(`${API_EVENT}/${params.id}`);
       setData(newRes.data.data);
     } catch (err) {
       console.log(err);
@@ -55,7 +56,7 @@ function EventDetailPage({ params }: { params: { id: string } }) {
         </div>
 
         <div className="flex flex-col md:flex-row justify-center items-center bg-primary p-10 mt-2">
-          <img src={`http://localhost:9000/${data.img_event}`} alt={data.title_img} />
+          <img src={`${BASE_URL}/${data.img_event}`} alt={data.title_img} />
           <div className="w-1/2">
             <p className="text-white text-center">{data.description}</p>
           </div>

@@ -7,6 +7,7 @@ import XButton from "@/components/XButton";
 import axios from "axios";
 import { showSuccessAlert } from "@/utils/alert";
 import { useRouter } from "next/navigation";
+import { API_FAQ } from "@/utils/apiUrls";
 
 interface Props {
   params: { id: string };
@@ -21,7 +22,7 @@ const EditFaq: NextPage<Props> = ({ params }: { params: { id: string } }) => {
 
   const getDataFaq = async () => {
     try {
-      const newRes = await axios.get(`http://localhost:9000/api/csc/faq/${params.id}`);
+      const newRes = await axios.get(`${API_FAQ}/${params.id}`);
       setForm(newRes.data.data);
     } catch (err) {
       console.log(err);
@@ -44,7 +45,7 @@ const EditFaq: NextPage<Props> = ({ params }: { params: { id: string } }) => {
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     try {
-      await axios.put("http://localhost:9000/api/csc/faq/update/" + params.id, form);
+      await axios.put(API_FAQ + "/update/" + params.id, form);
       showSuccessAlert("Data FAQ Has Been Updated Successfully!");
       router.push("/admin/dashboard/faq");
     } catch (err: any) {

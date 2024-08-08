@@ -7,6 +7,7 @@ import XButton from "@/components/XButton";
 import axios from "axios";
 import { showSuccessAlert } from "@/utils/alert";
 import { useRouter } from "next/navigation";
+import { API_DIVISION } from "@/utils/apiUrls";
 
 interface Props {
   params: { id: string };
@@ -24,7 +25,7 @@ const EditDivision: NextPage<Props> = ({ params }: { params: { id: string } }) =
 
   const getDataNow = async () => {
     try {
-      const newRes = await axios.get(`http://localhost:9000/api/csc/division/${params.id}`);
+      const newRes = await axios.get(`${API_DIVISION}/${params.id}`);
       setForm(newRes.data.data);
     } catch (err) {
       console.log(err);
@@ -51,7 +52,7 @@ const EditDivision: NextPage<Props> = ({ params }: { params: { id: string } }) =
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     try {
-      await axios.put("http://localhost:9000/api/csc/division/update/" + params.id, form, {
+      await axios.put(API_DIVISION + "/update/" + params.id, form, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

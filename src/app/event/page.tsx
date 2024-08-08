@@ -3,6 +3,7 @@ import CardSlider from "@/components/CardSlider";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import TopNav from "@/components/TopNav";
+import { API_EVENT } from "@/utils/apiUrls";
 import React, { useEffect, useState } from "react";
 import { MdEventNote } from "react-icons/md";
 
@@ -19,7 +20,7 @@ function Event() {
   }
   const getEventData = () => {
     try {
-      fetch(`http://localhost:9000/api/csc/event`)
+      fetch(API_EVENT)
         .then((res) => {
           return res.json();
         })

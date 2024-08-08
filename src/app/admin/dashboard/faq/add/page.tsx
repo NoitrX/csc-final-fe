@@ -2,6 +2,7 @@
 import InputLabel from "@/components/InputLabel";
 import XButton from "@/components/XButton";
 import { showSuccessAlert } from "@/utils/alert";
+import { API_FAQ } from "@/utils/apiUrls";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
@@ -29,7 +30,7 @@ export default function AddFaq() {
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:9000/api/csc/faq", form);
+      await axios.post(API_FAQ, form);
       showSuccessAlert("Data Faq Has Been Added Successfully!");
       router.push("/admin/dashboard/faq");
     } catch (err: any) {

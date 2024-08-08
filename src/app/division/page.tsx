@@ -2,6 +2,7 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import TopNav from "@/components/TopNav";
+import { API_DIVISION, BASE_URL } from "@/utils/apiUrls";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
@@ -21,7 +22,7 @@ function Division() {
 
   const GetDataDivision = () => {
     try {
-      fetch(`http://localhost:9000/api/csc/division`)
+      fetch(API_DIVISION)
         .then((res) => {
           return res.json();
         })
@@ -45,7 +46,7 @@ function Division() {
         <>
           <div className="bg-[url('/bg-1.png')] bg-cover bg-no-repeat  overflow-x-hidden font-poppins font-bold text-white flex flex-col items-center text-center md:text-justify md:flex-row justify-center gap-12 ">
             <p className="text-4xl uppercase ">{item.title_division}</p>
-            <img src={`http://localhost:9000/${item.image_division}`} alt="" />
+            <img src={`${BASE_URL}/${item.image_division}`} alt="" />
           </div>
           <div className="w-full bg-[#090f1f] pt-10 pb-20 flex flex-col items-center text-white gap-10 font-poppins">
             <div className="py-1 px-5 border-b border-white">

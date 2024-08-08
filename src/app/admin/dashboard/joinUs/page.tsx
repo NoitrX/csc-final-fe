@@ -4,6 +4,7 @@ import { FaRegEdit, FaRegTrashAlt } from "react-icons/fa";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { showConfirmDeleteAlert } from "@/utils/alert";
+import { API_JOIN_US } from "@/utils/apiUrls";
 
 function JoinUsPage() {
   const [data, setData] = useState<JoinUsData[]>([]);
@@ -17,7 +18,7 @@ function JoinUsPage() {
 
   const getJoinUsData = () => {
     try {
-      fetch(`http://localhost:9000/api/csc/join_us`)
+      fetch(API_JOIN_US)
         .then((res) => {
           return res.json();
         })
@@ -31,7 +32,7 @@ function JoinUsPage() {
 
   const handleDelete = async (id: number) => {
     try {
-      await showConfirmDeleteAlert(`http://localhost:9000/api/csc/join_us/delete/${id}`);
+      await showConfirmDeleteAlert(`${API_JOIN_US}/delete/${id}`);
       await getJoinUsData();
     } catch (err) {
       console.log(err);

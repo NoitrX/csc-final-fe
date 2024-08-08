@@ -2,6 +2,7 @@
 import InputLabel from "@/components/InputLabel";
 import XButton from "@/components/XButton";
 import { showSuccessAlert } from "@/utils/alert";
+import { API_JOIN_US } from "@/utils/apiUrls";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
@@ -30,7 +31,7 @@ export default function AddFaq() {
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:9000/api/csc/join_us", form);
+      await axios.post(API_JOIN_US, form);
       showSuccessAlert("Data Faq Has Been Added Successfully!");
       router.push("/admin/dashboard/joinUs");
     } catch (err: any) {
