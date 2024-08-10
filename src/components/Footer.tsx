@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="w-full flex justify-between items-center gap-5 px-10 py-5 bg-[#071952]">
-      <div className="flex items-center gap-3 text-[#1C61B1]">
+    <div className="w-full flex flex-col sm:flex-row justify-between items-center gap-5 px-0 sm:px-10 py-5 bg-[#071952]">
+      <div className="flex items-center gap-1 sm:gap-3 text-[#1C61B1]">
         <Link href={"mailto:csc.pnj@gmail.com"} className="p-2 ">
           <FiMail className="text-[#ffff]" />
         </Link>

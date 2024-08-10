@@ -14,7 +14,7 @@ export default function Home() {
       <Navbar />
       <div className="  p-20 flex flex-col gap-3 items-center text-center text-white">
         <p className="font-ubuntu font-bold text-2xl uppercase">Selamat Datang di</p>
-        <p className="font-poppins font-bold text-5xl uppercase">
+        <p className="font-poppins font-bold text-4xl sm:text-5xl uppercase">
           Website <a className="bg-gradient-to-r from-[#3876D3] to-[#919EAA] bg-clip-text text-transparent">Computer</a> Student Club
         </p>
         <p className="font-poppins font-bold text-3xl uppercase">CSC PNJ</p>
@@ -24,7 +24,7 @@ export default function Home() {
         <div className="w-48 h-48 rounded-full border border-white flex items-center justify-center">
           <img src="/csc-logo.png" alt="" />
         </div>
-        <p className="font-ubuntu font-bold text-2xl">#UnlimitedConnectionID</p>
+        <p className="font-ubuntu font-bold text-xl sm:text-2xl">#UnlimitedConnectionID</p>
         <div className="flex flex-col md:flex-row mt-10 gap-3 md:gap-32">
           <Link href={"/about"} className="flex items-center py-2 px-16 border-2 border-white font-bold gap-5 font-ubuntu hover:bg-blue-700 transition-all duration-200">
             <FiBookmark />
@@ -55,7 +55,7 @@ export default function Home() {
             <p className="font-ubuntu font-bold text-sm uppercase">About CSC</p>
           </Link>
           <div className="flex flex-col lg:flex-row items-end gap-10">
-            <div className="border-b border-[#6597E1] py-2 flex items-center font-poppins font-bold text-3xl gap-3 w-full h-full">
+            <div className="border-b border-[#6597E1] py-2 flex flex-col sm:flex-row items-start sm:items-center font-poppins font-bold text-3xl gap-1 sm:gap-3 w-full h-full">
               <p className="bg-gradient-to-r from-[#6597E1] to-[#999999] bg-clip-text text-transparent">100++</p>
               <p className="uppercase bg-gradient-to-r from-[#6597E1] to-[#999999] bg-clip-text text-transparent">
                 Graduate
@@ -76,7 +76,7 @@ export default function Home() {
       <div className="w-full p-20 bg-[#0D1221] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 font-poppins">
         <div className="flex items-center justify-center lg:justify-center gap-5">
           <img src="/softdev-logo.svg" />
-          <p className="font-bold text-3xl uppercase bg-gradient-to-r from-[#6597E1] to-white bg-clip-text text-transparent">
+          <p className="font-bold text-xl sm:text-3xl uppercase bg-gradient-to-r from-[#6597E1] to-white bg-clip-text text-transparent">
             Software
             <br />
             Development
@@ -84,7 +84,7 @@ export default function Home() {
         </div>
         <div className="flex items-center justify-center lg:justify-center gap-5">
           <img src="/cybersec-logo.svg" />
-          <p className="font-bold text-3xl uppercase bg-gradient-to-r from-[#6597E1] to-white bg-clip-text text-transparent">
+          <p className="font-bold text-xl sm:text-3xl uppercase bg-gradient-to-r from-[#6597E1] to-white bg-clip-text text-transparent">
             Cyber
             <br />
             Security
@@ -92,7 +92,7 @@ export default function Home() {
         </div>
         <div className="flex items-center justify-center md:justify-center md:col-span-2 lg:col-span-1 gap-5">
           <img src="/explore-logo.svg" />
-          <p className="font-bold text-3xl uppercase bg-gradient-to-r from-[#6597E1] to-white bg-clip-text text-transparent">
+          <p className="font-bold text-xl sm:text-3xl uppercase bg-gradient-to-r from-[#6597E1] to-white bg-clip-text text-transparent">
             Explore
             <br />
             (IoT)

@@ -30,7 +30,7 @@ export default function Navbar() {
     <div>
       <nav className="w-full flex items-center justify-between font-ubuntu font-semibold text-base py-5 px-10 border-b bg-transparent border-black uppercase text-white">
         <HighlightedLink href={"/"}>
-          <div className="flex jusify-center gap-3 items-center">
+          <div className="flex jusify-center gap-1 sm:gap-3 items-center">
             <img src="/csc-logo.png" className="w-12" alt="" />
             <p>COMPUTER STUDENT CLUB</p>
           </div>
