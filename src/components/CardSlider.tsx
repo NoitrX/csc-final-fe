@@ -38,7 +38,7 @@ const CardSlider: React.FC<CardSliderProps> = ({ slides }) => {
         className="mt-4"
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
-        slidesPerView={3}
+        slidesPerView={1}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
@@ -47,7 +47,6 @@ const CardSlider: React.FC<CardSliderProps> = ({ slides }) => {
           400: {
             slidesPerView: 1,
           },
-
           768: {
             slidesPerView: 2,
           },

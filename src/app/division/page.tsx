@@ -52,7 +52,7 @@ function Division() {
             <div className="py-1 px-5 border-b border-white">
               <p className="font-bold text-4xl uppercase bg-gradient-to-r from-white to-[#3876D3] bg-clip-text text-transparent">ABOUT</p>
             </div>
-            <p className="text-sm text-justify md:text-center px-24 md:px-48 ">{item.description}</p>
+            <p className="text-sm text-justify md:text-center px-16 md:px-48 ">{item.description}</p>
           </div>
           <div className="w-full bg-[#090f1f] pt-10 pb-20 flex flex-col md:flex-row justify-around px-32 text-white gap-10 font-poppins">
             <div className="flex flex-col">

@@ -46,13 +46,10 @@ export default function Home() {
             <p className="uppercase">Tentang CSC</p>
           </div>
           <p className="font-poppins font-bold text-3xl">Tempat Untuk Mempelajari Sesuatu dan Mengasah Sesuatu</p>
-          <div className="flex gap-10">
-            <FaHeadphones size="100%" />
-            <p className="font-poppins text-sm">
-              Computer Student Club (CSC) adalah kelompok studi mahasiswa di Politeknik Negeri Jakarta yang berfokus pada ranah keamanan siber, pengembangan perangkat lunak, dan IoT. Kami bertujuan untuk mengembangkan minat dan bakat
-              mahasiswa serta meningkatkan prestasi mereka dalam bidang teknologi.
-            </p>
-          </div>
+          <p className="font-poppins text-sm text-justify">
+            Computer Student Club (CSC) adalah kelompok studi mahasiswa di Politeknik Negeri Jakarta yang berfokus pada ranah keamanan siber, pengembangan perangkat lunak, dan IoT. Kami bertujuan untuk mengembangkan minat dan bakat
+            mahasiswa serta meningkatkan prestasi mereka dalam bidang teknologi.
+          </p>
           <Link href={"/about"} className="w-full bg-primary flex justify-center items-center gap-3 py-3 hover:bg-blue-700 transition-all duration-200">
             <FaMagnifyingGlass />
             <p className="font-ubuntu font-bold text-sm uppercase">About CSC</p>
